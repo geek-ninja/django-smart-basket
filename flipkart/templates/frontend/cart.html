@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart</title>
+    <link rel="stylesheet" href="{% static 'CSS/cart.css' %}">
+</head>
+<body>
+    <div class = 'cart_header'></div>
+
+    <h1>welcome to cart</h1>
+    <div class="cart">
+        <div class="cart_items">
+            {% for i in object_list%}
+                <div class="cart_item">
+                    <img src="{{i.item.link}}" width="100px"><br>
+                    {{i.item.title}}<br>
+                    <p>Quantity : {{i.quantity}}</p>
+                    <p>₹{% widthratio i.item.price 1 i.quantity %}</p>
+                </div>
+            {% endfor %}
+        </div>
+        
+        <div class="cart_btn">
+            <p>Confirm and purchase your items</p>
+            <a href="{{i.get_absolute_user}}"><button>buy</button></a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+}
+.cart_header{
+    background-image: url("https://techfactslive.com/wp-content/uploads/2017/03/The-Flipkart-Electronics-Sale-22-24-March.jpg");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+}
+body > h1{
+    margin: 10px;
+    align-items: center;
+}
+.cart_items{
+    margin: 20px;
+}
+.cart_item{
+    margin: 10px 0 ;
+}
+.cart_item > p{
+    font-weight: 600;
+}
+.cart{
+    display: flex;
+    justify-content: space-around;
+}
+.cart_btn > p{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+button {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 4px 2px;
+    cursor: pointer;
+}

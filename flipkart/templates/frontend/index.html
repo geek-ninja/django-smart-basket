@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart</title>
+    <link rel="stylesheet" href="{% static 'CSS/home.css' %}">
+    <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+
+</head>
+<body class = 'mainApp_body'>
+    <div class="mainApp_nav">
+        <div class="mainApp_nav_left">
+            <img src="{% static 'IMG/header.svg'%}">
+            <div class="mainApp_nav_input">
+                <input type="text" placeholder="Search grocery products">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+            <div class="mainApp_items">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <p>Delivery to 700012</p>
+                <i class="fa fa-arrow-down" aria-hidden="true"></i>
+            </div>
+            <input class = 'mainApp_nav_submit' type="submit" value="Login">
+            <div class="mainApp_items">
+                <p>More</p>
+                <i class="fa fa-arrow-down" aria-hidden="true"></i>
+            </div>
+            <div class="mainApp_items">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <a href="{%url 'mainApp:order_items' %}">Cart</a>
+            </div>
+        </div>
+        <div class="mainApp_nav_right">
+            <img src="{% static 'IMG/logo.svg'%}">
+        </div>
+    </div>
+    <div class="mainApp_items_header">
+        <div class="mainApp_item"><p>Staples</p></div>
+        <div class="mainApp_item"><p>Snacks & Beverages</p></div>
+        <div class="mainApp_item"><p>Packaged Food</p></div>
+        <div class="mainApp_item"><p>Personal & Baby Care</p></div>
+        <div class="mainApp_item"><p>Household Care</p></div>
+        <div class="mainApp_item"><p>Dairy & Eggs</p></div>
+        <div class="mainApp_item"><p>Home & Kitchen</p></div>
+    </div>
+    <div class="mainApp_items_body">
+        <div class="mainApp_items_left">
+            <div class="filter">
+                <h2>Filters</h2>
+                <div class="filter_type">
+                    <input type="radio">
+                    <span>24 Mantra</span>
+                </div>
+                <div class="filter_type">
+                    <input type="radio">
+                    <span>24 Mantra Organic</span>
+                </div>
+
+                <div class="filter_type">
+                    <input type="radio">
+                    <span>7UP</span>
+                </div>
+
+                <div class="filter_type">
+                    <input type="radio">
+                    <span>AADITYA</span>
+                </div>
+
+                <div class="filter_type">
+                    <input type="radio">
+                    <span>AASHIRVAAD</span>
+                </div>
+                <div class="filter_type">
+                    <input type="radio">
+                    <span>ACTII</span>
+                </div>
+            </div>
+            <div class="rating">
+                <h1>Ratings</h1>
+                <div class="rating_item">
+                    <input type="radio">
+                    <span>4★ & above</span>
+                </div>
+                <div class="rating_item">
+                    <input type="radio">
+                    <span>3★ & above</span>
+                </div>
+                <div class="rating_item">
+                    <input type="radio">
+                    <span>2★ & above</span>
+                </div>
+                <div class="rating_item">
+                    <input type="radio">
+                    <span>1★ & above</span>
+                </div>
+            </div>
+            <div class="Offers">
+                <h2>Offers</h2>
+                <div>
+                    <input type="radio">
+                    <span>Buy More,Save More</span>
+                </div>
+                <div>
+                    <input type="radio">
+                    <span>Buy More,Save More</span>
+                </div>
+            </div>
+            <div class="Discount">
+                <div class = 'Discount_item'><input type="radio"><span>Discount</span></div>
+                <div class = 'Discount_item'><input type="radio"><span>Organic Type</span></div>
+                <div class = 'Discount_item'><input type="radio"><span>Availability</span></div>
+            </div>
+        </div>
+        <div class="mainApp_items_right">
+            {% for item in object_list%}
+            <div class="items">
+                <img src="{{item.link}}">
+                <p>{{item.title}}</p>
+                <p>₹{{item.price}}</p>
+                <a href="{{item.get_absolute_url}}"><button>checkout</button></a>
+            </div>
+            {% endfor%}
+        </div>
+    </div>
+    <script type="text/javascript" src="{% static 'JS/cart.js'%}">
+    </script>
+</body>
+</html>

@@ -20,7 +20,9 @@ python manage.py startapp mainApp
 python manage.py runserver
 
 <h2>Important Code Snippets</h2>
+
 ```python
+
 from django.db import models
 from django.conf import settings
 from django.shortcuts import reverse
@@ -55,4 +57,5 @@ class Order(models.Model):
     
     def __str__(self):
         return self.user.username
+        
 ```

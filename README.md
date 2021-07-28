@@ -143,7 +143,8 @@ def buyView(request,user):
 
 <p>Each Item store in database</p>
 
-![](4.png)
+![](5.jpg)
 
 <p>Order databae</p>
-![](5.png)
+
+![](4.png)

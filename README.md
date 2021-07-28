@@ -66,3 +66,12 @@ class Order(models.Model):
     <li>Cart</li>
     <li>Order</li>
 </ul>
+
+<h3>Item</h3>
+<p>This model of database will store all the items along with it's picture , description and price</p>
+
+<h3>Cart</h3>
+<p>This database will store the user which is logged in,and the items added to cart by user</p>
+
+<h3>Order</h3>
+<p>This database will confirm the purchase and clear the Cart database and store the data as transaction history of the user which will be later trained my ML to suggest items to the same user from the Order database</p>

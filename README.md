@@ -20,6 +20,7 @@ python manage.py startapp mainApp
 python manage.py runserver
 
 <h2>Important Code Snippets</h2>
+<p>models.py</p>
 
 ```python
 
@@ -59,3 +60,9 @@ class Order(models.Model):
         return self.user.username
         
 ```
+<p>3 set of models of database made<p>
+<ul>
+    <li>Item</li>
+    <li>Cart</li>
+    <li>Order</li>
+</ul>

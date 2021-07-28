@@ -132,3 +132,18 @@ def buyView(request,user):
 <p>Frontend items list</p>
 
 ![](1.png)
+
+<p>Cart frontpage</p>
+
+![](2.png)
+
+<p>Item Database structure</p>
+
+![](3.png)
+
+<p>Each Item store in database</p>
+
+![](4.png)
+
+<p>Order databae</p>
+![](5.png)

@@ -122,3 +122,13 @@ def buyView(request,user):
         return redirect('mainApp:home')
 
 ```
+
+<h2>Currently working on ML to integrate it with the frontend and django database</h2>
+<p>Model to be used is : Frequency Pattern Tree </p>
+<p>Contributions to this project is open</p>
+
+<h2>Snapshot of the website and databae</h2>
+
+<p>Frontend items list</p>
+
+![](1.png)
